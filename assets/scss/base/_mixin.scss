@@ -1,0 +1,176 @@
+//------------------------------------------------------------------------------
+//  Set a rem font size with pixel fallback by Nicolas Gallagher
+//
+//	Rem is similar to the em value, but instead of being relative to the parent
+//	element it’s relative to the font-size set in the <html>.
+//------------------------------------------------------------------------------
+//	Сomposed:
+// 	@mixin font-size()
+//	@function calculateRem()
+//------------------------------------------------------------------------------
+//  Url: https://webdesign.tutsplus.com/tutorials/a-simple-responsive-grid-made-even-better-with-sass--cms-21540
+//------------------------------------------------------------------------------
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+//-----------gradient---------------
+@mixin background-gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+
+	@if $orientation == 'vertical' {
+		background: -webkit-linear-gradient(top, $start-color, $end-color);
+		background: linear-gradient(to bottom, $start-color, $end-color);
+	} @else if $orientation == 'horizontal' {
+		background: -webkit-linear-gradient(left, $start-color, $end-color);
+		background: linear-gradient(to right, $start-color, $end-color);
+	} @else {
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
+	}
+}
+
+//-------------font face--------------------
+@mixin font-face($font-name, $file-name) {
+	@font-face {
+		font-family: quote($font-name);
+		src: url('assets/fonts/'+ $file-name + '.eot');
+		src: url('assets/fonts/'+ $file-name + '.eot?#iefix')  format('embedded-opentype'),
+					 url('assets/fonts/'+ $file-name + '.woff') format('woff'),
+					 url('assets/fonts/'+ $file-name + '.ttf')  format('truetype'),
+					 url('assets/fonts/'+ $file-name + '.svg##{$font-name}')  format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+//-------------input placeholder---------------------
+@mixin placeholder($color, $font){
+	&::-webkit-input-placeholder { color:$color; font-family:$font;}
+	&::-moz-placeholder { color:$color; font-family:$font;}
+	&:-ms-input-placeholder { color:$color; font-family:$font;}
+	&:-moz-placeholder { color:$color; font-family:$font;}
+}
+
+@mixin columns($count, $gap){
+	-webkit-column-count: $count;
+	-moz-column-count:    $count;
+	column-count:         $count;
+
+	-webkit-column-gap:   $gap;
+	-moz-column-gap:      $gap;
+	column-gap:           $gap;
+}
+
+//-------------String Replace---------------------
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+//-------------Font Face---------------------------
+
+@mixin font-face($name, $file_name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+					eot: "?#iefix",
+					svg: "#" + str-replace($file_name, " ", "_")
+	);
+
+	$formats: (
+					eot: "embedded-opentype",
+					otf: "opentype",
+					ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: url(quote($path + ".eot"));
+		src: $src;
+	}
+}
+
+@mixin hover-svg-in-block($parent) {
+	.#{$parent} {
+		svg {
+			line, polygon, rect, polyline, path, circle, ellipse {
+				transition-duration: $time;
+				transition-timing-function: ease;
+				transition-property: stroke,fill;
+			}
+		}
+
+		&:not(:hover) svg {
+			line, polygon, rect, polyline, path, circle, ellipse {
+				stroke: $light_color !important;
+			}
+			.svg__fl {
+				fill: $light_color !important;
+			}
+			.svg__no-st {
+				stroke: none !important;
+			}
+		}
+	}
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}
+}
+
+@mixin animation($properies...) {
+	transition-duration: $time;
+	transition-timing-function: ease;
+	transition-property: $properies;
+}
+
+//------------------------------------------------------------------------------
+//  SVG background images with PNG and retina fallback
+//
+//	This mixin depends on Modernizr and creates a bit more work for you when creating
+//	images for your site, but it’s really worth it in the end.
+//------------------------------------------------------------------------------
+//	All in all you need this:
+//	pattern.svg
+//	pattern.png
+//	pattern@2x.png
+//------------------------------------------------------------------------------
+//  Url: https://webdesign.tutsplus.com/tutorials/a-simple-responsive-grid-made-even-better-with-sass--cms-21540
+//------------------------------------------------------------------------------
+
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+	background-image: url(#{$image-path}/#{$name}.svg);
+	@if($size){
+		background-size: $size;
+	}
+	.no-svg &{
+		background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+		@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+			background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+		}
+	}
+}

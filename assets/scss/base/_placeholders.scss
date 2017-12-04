@@ -1,0 +1,112 @@
+
+
+%abs-vert-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%abs-hor-align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%abs-center-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+%flex {
+  display: flex;
+}
+
+%flex-hor-vert-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+%flex-vert-center {
+  display: flex;
+  align-items: center;
+}  
+
+%flex-hor-center {
+  display: flex;
+  justify-content: center;
+}  
+
+%borrad50 {
+  border-radius: 50%;
+}
+ 
+
+%transition {
+  transition: 0.2s linear;
+}
+
+%flex-align-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-space-beetw {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-space-arounr {
+  display: flex;
+  justify-content: space-around;
+}
+
+%borrad05 {
+  border-radius: 0.5rem;
+}
+
+%btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+%font-base {
+font-size: $font-size-base;}
+
+%font-base-second {
+font-size: $font-size-secondary;}
+
+%bor-rad-50 {
+  border-radius: 50%;
+}
+
+%font-monts {
+  font-family: 'Montserrat', sans-serif;
+}
+
+%font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+%font-kaushan {
+font-family: 'Kaushan Script',sans-serif;
+}
+
+%gradient {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -1px;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(239, 139, 138, .9) 0%, rgba(228, 215, 135, .9) 100%);
+}
+
+%gradient-animation-start {
+  width: 0%;
+  height: 0%
+}

@@ -1,0 +1,151 @@
+$global-font-icon: 'social';
+@font-face {
+  font-family: $global-font-icon;
+  src:url("../assets/fonts/myicons.eot");
+  src:url("../assets/fonts/myicons.?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/myicons.woff") format("woff"),
+    url("../assets/fonts/myicons.ttf") format("truetype"),
+    url("../assets/fonts/myicons.#myicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: $global-font-icon;
+
+  &:before {
+    /* Some common icon stuff */
+  }
+
+  &.icon--alarm {
+    &:before {
+      content: $icon-alarm;
+    }
+  }
+  &.icon--arrow {
+    &:before {
+      content: $icon-arrow;
+    }
+  }
+  &.icon--comments {
+    &:before {
+      content: $icon-comments;
+    }
+  }
+  &.icon--creat {
+    &:before {
+      content: $icon-creat;
+    }
+  }
+  &.icon--css {
+    &:before {
+      content: $icon-css;
+    }
+  }
+  &.icon--digit {
+    &:before {
+      content: $icon-digit;
+    }
+  }
+  &.icon--drbbbl {
+    &:before {
+      content: $icon-drbbbl;
+    }
+  }
+  &.icon--equal {
+    &:before {
+      content: $icon-equal;
+    }
+  }
+  &.icon--fb {
+    &:before {
+      content: $icon-fb;
+    }
+  }
+  &.icon--gooogle {
+    &:before {
+      content: $icon-gooogle;
+    }
+  }
+  &.icon--inst {
+    &:before {
+      content: $icon-inst;
+    }
+  }
+  &.icon--left-arrow {
+    &:before {
+      content: $icon-left-arrow;
+    }
+  }
+  &.icon--magnif {
+    &:before {
+      content: $icon-magnif;
+    }
+  }
+  &.icon--photo {
+    &:before {
+      content: $icon-photo;
+    }
+  }
+  &.icon--pint {
+    &:before {
+      content: $icon-pint;
+    }
+  }
+  &.icon--quote-img {
+    &:before {
+      content: $icon-quote-img;
+    }
+  }
+  &.icon--right-arrow {
+    &:before {
+      content: $icon-right-arrow;
+    }
+  }
+  &.icon--seo2 {
+    &:before {
+      content: $icon-seo2;
+    }
+  }
+  &.icon--shopp {
+    &:before {
+      content: $icon-shopp;
+    }
+  }
+  &.icon--tmblr {
+    &:before {
+      content: $icon-tmblr;
+    }
+  }
+  &.icon--twitt {
+    &:before {
+      content: $icon-twitt;
+    }
+  }
+  &.icon--users {
+    &:before {
+      content: $icon-users;
+    }
+  }
+  &.icon--visit {
+    &:before {
+      content: $icon-visit;
+    }
+  }
+  &.icon--web-des {
+    &:before {
+      content: $icon-web-des;
+    }
+  }
+  &.icon--webdsgn {
+    &:before {
+      content: $icon-webdsgn;
+    }
+  }
+  &.icon--youtb {
+    &:before {
+      content: $icon-youtb;
+    }
+  }
+
+}

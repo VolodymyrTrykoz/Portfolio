@@ -1,0 +1,107 @@
+//------------------------------------------------------------------------------
+//  Clearfix by Nicolas Gallagher
+//------------------------------------------------------------------------------
+//  Url: https://webdesign.tutsplus.com/tutorials/a-simple-responsive-grid-made-even-better-with-sass--cms-21540
+//------------------------------------------------------------------------------
+
+%clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+%ibt {
+	display: inline-block;
+	vertical-align: top;
+}
+%ibm {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+%before {
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+%table{
+	display: table;
+	font-size: 0 !important;
+	width: 100%;
+}
+
+%fullsize{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+//----------------центрирование-----------------------
+%vam{
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+%ham{
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+%cam{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+//----------------------
+%hov-opacity{
+	transition: all $time;
+	&:hover{
+		opacity: .8;
+	}
+}
+//----------------------
+%btn{
+	@extend %ibm;
+	border: none;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: all $time;
+	text-decoration: none;
+	&:active {
+		box-shadow: inset 0 0 4px rgba(0,0,0,.4);
+	}
+}
+
+//-----------------
+%text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+//-----------animation--------------
+%anim_hide {
+	margin-top: 30px;
+	visibility: hidden;
+	opacity: 0;
+	transition: margin $time ease,visibility $time ease,opacity $time ease;
+}
+
+%anim_show {
+	margin-top: 0;
+	visibility: visible;
+	opacity: 1;
+}
+
+

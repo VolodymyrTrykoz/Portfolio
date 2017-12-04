@@ -1,0 +1,23 @@
+//	Functions
+
+@function basecolor($opacity){
+	@return rgba(39,21,15,$opacity);
+}
+
+//------------------------------------------------------------------------------
+//  Set a rem font size with pixel fallback by Nicolas Gallagher
+//
+//	Rem is similar to the em value, but instead of being relative to the parent
+//	element it’s relative to the font-size set in the <html>.
+//------------------------------------------------------------------------------
+//	Сomposed:
+// 	@mixin font-size()
+//	@function calculateRem()
+//------------------------------------------------------------------------------
+//  Url: https://webdesign.tutsplus.com/tutorials/a-simple-responsive-grid-made-even-better-with-sass--cms-21540
+//------------------------------------------------------------------------------
+
+@function calculateRem($size) {
+	$remSize: $size / $font-size-base;
+	@return $remSize * 1rem;
+}

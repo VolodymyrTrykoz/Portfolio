@@ -1,0 +1,86 @@
+@media only screen and (max-width: 1220px) {
+  .header {
+    max-width: 100%; } }
+
+@media only screen and (max-width: 992px) {
+  .header__items {
+    display: block; }
+  .main-title {
+    font-size: 7rem; }
+  .main-subtitle {
+    font-size: 5rem; }
+  .list__item {
+    padding: 0 0.5rem; }
+  .indicators__link {
+    font-size: 1rem; }
+  .story__item-box {
+    width: 65%;
+    margin: 15px auto; }
+  .service__item:nth-child(-n + 5):after {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 1px;
+    background: #e5e5e5;
+    margin-bottom: 5rem; } }
+
+@media only screen and (max-width: 768px) {
+  .item-box__nav, .item-box__magnif, .item-box__shopp {
+    padding: 0; }
+  .main-subtitle {
+    margin-top: 30rem; }
+  .main-title {
+    font-size: 4rem; }
+  .header__item-box, .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .carousel-indicators {
+    bottom: 8rem;
+    margin-left: 2.5rem; }
+  .indicators__link span {
+    display: block; }
+  .icon--users, .addinf__text {
+    font-size: 1rem; }
+  .duties__img .img-responsive {
+    margin: 2rem auto; }
+  .number {
+    font-size: 3rem; }
+  .picture-item {
+    width: 62%;
+    margin: 0 auto; }
+  .img-block__tablet {
+    width: 100%; }
+  .img-block__phone {
+    left: 50%;
+    width: 50%; }
+  .data-item span {
+    font-size: 1rem; }
+  .item__social-link .icon {
+    padding: 0.7rem 1.5rem; }
+  .portfolio-basis-item .icon--photo {
+    font-size: 1rem; }
+  .basis-item__descr {
+    display: none; }
+  .carousel-wrapper .icon {
+    padding-top: 25rem; }
+  .carousel-wrapper .icon--indent {
+    padding-top: 12rem; }
+  .carousel-page__img {
+    margin-right: 2.5rem; }
+  .carousel-img {
+    margin: 3rem; }
+  .client__box, .client__name, .client__job {
+    text-align: center; }
+  .blog-stat {
+    margin-bottom: 1.5rem; }
+  .carousel-page__blcquote {
+    font-size: 1rem; }
+  .social__span {
+    display: block; } }
+
+/*# sourceMappingURL=media.css.map */

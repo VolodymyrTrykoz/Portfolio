@@ -1,0 +1,102 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/placeholders';
+@import 'base/keyframes';
+@import 'base/media.scss'; 
+@import 'icons/iconfont__variables';
+@import 'icons/iconfont__icons';
+
+
+
+// Base Style
+
+@import "base/_variables";
+@import "base/placeholders";
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One|Source+Code+Pro');
+
+/*
+font-family: 'Source Code Pro', monospace;
+font-family: 'Sigmar One', cursive;
+*/
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+html {
+  font-size: 62.5%;
+  background-image: url(/dist/img/fon.jpg);
+  background-size: cover;
+}
+body {font-family: 'Source Code Pro', monospace;}
+
+a {text-decoration: none;}
+
+a:hover {text-decoration: none;}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+ 
+ .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  
+      &__name {
+      font-family: 'Sigmar One', cursive;
+      font-size: 5rem;
+      padding: 5rem 0 3rem 0;
+      color: #6EC1EF
+     
+
+    }
+      &__description {
+      height: 25rem;
+      color: #6EC1EF
+    }
+      &__img .img-my-photo {
+      margin: 5rem;
+      border-radius: 50%;
+    }
+ 
+}
+
+.running-string {
+  font-size: 2rem;
+}
+
+
+ 
+.list-item{
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1em;
+
+}
+
+.item-link {
+  color: #6EC1EF
+}
+

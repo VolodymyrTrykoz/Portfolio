@@ -1,0 +1,26 @@
+$global-font-icon: 'social';
+@font-face {
+  font-family: $global-font-icon;
+  src:url("<%= fontPath %><%= fontName %>.eot");
+  src:url("<%= fontPath %><%= fontName %>.?#iefix") format("embedded-opentype"),
+    url("<%= fontPath %><%= fontName %>.woff") format("woff"),
+    url("<%= fontPath %><%= fontName %>.ttf") format("truetype"),
+    url("<%= fontPath %><%= fontName %>.#<%= fontName %>") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: $global-font-icon;
+
+  &:before {
+    /* Some common icon stuff */
+  }
+<% _.each(glyphs, function(glyph) { %>
+  &.icon--<%= glyph.name %> {
+    &:before {
+      content: $icon-<%= glyph.name %>;
+    }
+  }<% }); %>
+
+}
