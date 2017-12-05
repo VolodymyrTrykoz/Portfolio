@@ -16,12 +16,8 @@
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Sigmar+One|Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Source+Serif+Pro');
 
-/*
-font-family: 'Source Code Pro', monospace;
-font-family: 'Sigmar One', cursive;
-*/
 
 
 html,
@@ -37,8 +33,14 @@ html {
   font-size: 62.5%;
   background-image: url(../img/fon.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+
 }
-body {font-family: 'Source Code Pro', monospace;}
+
+
+body {font-family: 'Barlow Semi Condensed', sans-serif;}
 
 a {text-decoration: none;}
 
@@ -64,23 +66,35 @@ ul, li {
   text-align: center;
   
       &__description {
-      font-size: 2rem; 
-      padding: 1rem; 
+      font-size: 3rem; 
+      padding-top: 1em; 
       color:  #1B4367;
-    }
+      transition: 3s all; 
+      
+          &--shift {
+            transform: translateY(100px);
+            opacity: 0;
+          }
+      }
+
+      &__name {
+        padding-top: 2em;
+      }
+
       &__img {
-      padding-top: 15rem; 
+      
           & .img-my-photo {
           padding:5rem;  
           border-radius: 50%;
+          width: 25%;
           }
       }
  
 }
 
 .running-string {
-  font-family: 'Sigmar One', cursive;
-  font-size: 4rem;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 6rem;
   color: #1B4367;
 }
 
@@ -98,27 +112,14 @@ ul, li {
   color: #1B4367;
 }
 
-.bbb {
-  transition: 3s all; 
-  transform: translateY(100px);
-  opacity: 0;
+
+
+hr {
+ background: #0BAAD4;
 }
 
 
-
-
-
-$bg: #0BAAD4;
-$text: rgba(255,255,255,.7);
-$hover: darken($bg, 10%);
-
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-
-
-
-a, a > span {
+.item-link, .item-link > span {
   position: relative;
   color: inherit;
   text-decoration: none;
@@ -131,16 +132,14 @@ a, a > span {
 }
 
 
-
-//------- {{ effect-5 }} -------//
-
-.effect-5 {
+.item-link {
+  transition: 0.2s linear all;
   display: inline-block;
   overflow: hidden;
   &:before, &:after {
     right: 0;
     bottom: 0;
-    background: $hover;
+    background: #0BAAD4;
   }
   &:before {
     width: 100%;
@@ -152,13 +151,19 @@ a, a > span {
     height: 100%;
     transform:  translateY(100%);
   }
+  &:hover {
+    color: #0BAAD4;
+  }
+  &:active {
+    color: green;
+  }
   > span {
     display: block;
     padding: 10px;
     &:before, &:after {
       left: 0;
       top: 0;
-      background: $hover;
+      background: #0BAAD4;
     }
     &:before {
       width: 100%;
@@ -173,6 +178,7 @@ a, a > span {
   }
   &:hover:before, &:hover:after, &:hover > span:before, &:hover > span:after {
     transform:  translate(0, 0);
+
   }
 }
 

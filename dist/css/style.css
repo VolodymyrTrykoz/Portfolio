@@ -16,8 +16,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import url("https://fonts.googleapis.com/css?family=Sigmar+One|Source+Code+Pro");
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Source+Serif+Pro");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -534,10 +533,6 @@ th {
   .icon.icon--youtb:before {
     content: ""; }
 
-/*
-font-family: 'Source Code Pro', monospace;
-font-family: 'Sigmar One', cursive;
-*/
 html,
 body {
   height: 100%;
@@ -548,10 +543,12 @@ body {
 html {
   font-size: 62.5%;
   background-image: url(../img/fon.jpg);
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 body {
-  font-family: 'Source Code Pro', monospace; }
+  font-family: 'Barlow Semi Condensed', sans-serif; }
 
 a {
   text-decoration: none; }
@@ -577,18 +574,27 @@ ul, li {
   margin: 0 auto;
   text-align: center; }
   .container__description {
-    font-size: 2rem;
-    padding: 1rem;
-    color: #1B4367; }
-  .container__img {
-    padding-top: 15rem; }
-    .container__img .img-my-photo {
-      padding: 5rem;
-      border-radius: 50%; }
+    font-size: 3rem;
+    padding-top: 1em;
+    color: #1B4367;
+    -webkit-transition: 3s all;
+    -o-transition: 3s all;
+    transition: 3s all; }
+    .container__description--shift {
+      -webkit-transform: translateY(100px);
+          -ms-transform: translateY(100px);
+              transform: translateY(100px);
+      opacity: 0; }
+  .container__name {
+    padding-top: 2em; }
+  .container__img .img-my-photo {
+    padding: 5rem;
+    border-radius: 50%;
+    width: 25%; }
 
 .running-string {
-  font-family: 'Sigmar One', cursive;
-  font-size: 4rem;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 6rem;
   color: #1B4367; }
 
 .list-item {
@@ -600,21 +606,15 @@ ul, li {
 .item-link {
   color: #1B4367; }
 
-.bbb {
-  -webkit-transition: 3s all;
-  -o-transition: 3s all;
-  transition: 3s all;
-  -webkit-transform: translateY(100px);
-      -ms-transform: translateY(100px);
-          transform: translateY(100px);
-  opacity: 0; }
+hr {
+  background: #0BAAD4; }
 
-a, a > span {
+.item-link, .item-link > span {
   position: relative;
   color: inherit;
   text-decoration: none;
   line-height: 24px; }
-  a:before, a:after, a > span:before, a > span:after {
+  .item-link:before, .item-link:after, .item-link > span:before, .item-link > span:after {
     content: '';
     position: absolute;
     -webkit-transition: -webkit-transform .5s ease;
@@ -623,45 +623,52 @@ a, a > span {
     transition: transform .5s ease;
     transition: transform .5s ease, -webkit-transform .5s ease; }
 
-.effect-5 {
+.item-link {
+  -webkit-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+  transition: 0.2s linear all;
   display: inline-block;
   overflow: hidden; }
-  .effect-5:before, .effect-5:after {
+  .item-link:before, .item-link:after {
     right: 0;
     bottom: 0;
-    background: #0883a4; }
-  .effect-5:before {
+    background: #0BAAD4; }
+  .item-link:before {
     width: 100%;
     height: 2px;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%); }
-  .effect-5:after {
+  .item-link:after {
     width: 2px;
     height: 100%;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
             transform: translateY(100%); }
-  .effect-5 > span {
+  .item-link:hover {
+    color: #0BAAD4; }
+  .item-link:active {
+    color: green; }
+  .item-link > span {
     display: block;
     padding: 10px; }
-    .effect-5 > span:before, .effect-5 > span:after {
+    .item-link > span:before, .item-link > span:after {
       left: 0;
       top: 0;
-      background: #0883a4; }
-    .effect-5 > span:before {
+      background: #0BAAD4; }
+    .item-link > span:before {
       width: 100%;
       height: 2px;
       -webkit-transform: translateX(100%);
           -ms-transform: translateX(100%);
               transform: translateX(100%); }
-    .effect-5 > span:after {
+    .item-link > span:after {
       width: 2px;
       height: 100%;
       -webkit-transform: translateY(-100%);
           -ms-transform: translateY(-100%);
               transform: translateY(-100%); }
-  .effect-5:hover:before, .effect-5:hover:after, .effect-5:hover > span:before, .effect-5:hover > span:after {
+  .item-link:hover:before, .item-link:hover:after, .item-link:hover > span:before, .item-link:hover > span:after {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0); }
