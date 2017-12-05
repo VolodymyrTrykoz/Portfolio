@@ -533,13 +533,6 @@ th {
   .icon.icon--youtb:before {
     content: ""; }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-
 html {
   font-size: 62.5%;
   background-image: url(../img/fon.jpg);
@@ -607,11 +600,10 @@ ul, li {
   color: #1B4367; }
 
 hr {
-  background: #0BAAD4; }
+  background: #1B4367; }
 
 .item-link, .item-link > span {
   position: relative;
-  color: inherit;
   text-decoration: none;
   line-height: 24px; }
   .item-link:before, .item-link:after, .item-link > span:before, .item-link > span:after {
@@ -646,16 +638,16 @@ hr {
         -ms-transform: translateY(100%);
             transform: translateY(100%); }
   .item-link:hover {
-    color: #0BAAD4; }
+    color: #a32222; }
   .item-link:active {
-    color: green; }
+    color: blue; }
   .item-link > span {
     display: block;
     padding: 10px; }
     .item-link > span:before, .item-link > span:after {
       left: 0;
       top: 0;
-      background: #0BAAD4; }
+      background: #a32222; }
     .item-link > span:before {
       width: 100%;
       height: 2px;

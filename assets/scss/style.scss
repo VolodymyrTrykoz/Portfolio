@@ -20,14 +20,8 @@
 
 
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  
-}
+$content-color: #1B4367;
+$link-hover: #a32222;
 
 html {
   font-size: 62.5%;
@@ -95,7 +89,7 @@ ul, li {
 .running-string {
   font-family: 'Source Serif Pro', serif;
   font-size: 6rem;
-  color: #1B4367;
+  color: $content-color;
 }
 
 
@@ -109,19 +103,18 @@ ul, li {
 }
 
 .item-link {
-  color: #1B4367;
+  color:$content-color;
 }
 
 
 
 hr {
- background: #0BAAD4;
+ background: $content-color;
 }
 
 
 .item-link, .item-link > span {
   position: relative;
-  color: inherit;
   text-decoration: none;
   line-height: 24px;
   &:before, &:after {
@@ -152,10 +145,10 @@ hr {
     transform:  translateY(100%);
   }
   &:hover {
-    color: #0BAAD4;
+    color: $link-hover;
   }
   &:active {
-    color: green;
+    color: blue;
   }
   > span {
     display: block;
@@ -163,7 +156,7 @@ hr {
     &:before, &:after {
       left: 0;
       top: 0;
-      background: #0BAAD4;
+      background: $link-hover;
     }
     &:before {
       width: 100%;
