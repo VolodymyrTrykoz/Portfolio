@@ -601,7 +601,8 @@ ul, li {
   .container__description {
     font-size: 3rem;
     padding-top: 1em;
-    color: #1B4367;
+    padding-bottom: 1em;
+    color: #2309f1;
     -webkit-transition: 3s all;
     -o-transition: 3s all;
     transition: 3s all; }
@@ -610,8 +611,6 @@ ul, li {
           -ms-transform: translateY(100px);
               transform: translateY(100px);
       opacity: 0; }
-  .container__name {
-    padding-top: 2em; }
   .container__img .img-my-photo {
     padding: 5rem;
     border-radius: 50%;
@@ -620,7 +619,7 @@ ul, li {
 .running-string {
   font-family: 'Source Serif Pro', serif;
   font-size: 6rem;
-  color: #1B4367; }
+  color: #2309f1; }
 
 .list-item {
   display: inline-block;
@@ -629,10 +628,10 @@ ul, li {
   padding: 1em; }
 
 .item-link {
-  color: #1B4367; }
+  color: #2309f1; }
 
 hr {
-  background: #1B4367; }
+  background: #2309f1; }
 
 .item-link, .item-link > span {
   position: relative;
@@ -656,7 +655,7 @@ hr {
   .item-link:before, .item-link:after {
     right: 0;
     bottom: 0;
-    background: #0BAAD4; }
+    background: #fff; }
   .item-link:before {
     width: 100%;
     height: 2px;
@@ -664,13 +663,13 @@ hr {
         -ms-transform: translateX(-100%);
             transform: translateX(-100%); }
   .item-link:after {
-    width: 2px;
+    width: 3px;
     height: 100%;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
             transform: translateY(100%); }
   .item-link:hover {
-    color: #a32222; }
+    color: #2309f1; }
   .item-link:active {
     color: blue; }
   .item-link > span {
@@ -679,7 +678,7 @@ hr {
     .item-link > span:before, .item-link > span:after {
       left: 0;
       top: 0;
-      background: #a32222; }
+      background: #2309f1; }
     .item-link > span:before {
       width: 100%;
       height: 2px;
@@ -687,7 +686,7 @@ hr {
           -ms-transform: translateX(100%);
               transform: translateX(100%); }
     .item-link > span:after {
-      width: 2px;
+      width: 3px;
       height: 100%;
       -webkit-transform: translateY(-100%);
           -ms-transform: translateY(-100%);
@@ -735,7 +734,7 @@ hr {
           box-shadow: 10px 10px 40px #7474e5; }
 
 .item__back {
-  background-color: rgba(157, 115, 112, 0.6);
+  background-color: rgba(113, 110, 105, 0.6);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   -webkit-box-shadow: 10px 10px 40px #fff;
@@ -748,7 +747,7 @@ hr {
     padding: 0.1em; }
     .back__list-item--link {
       font-weight: 700;
-      color: #1B4367; }
+      color: #2309f1; }
       .back__list-item--link:hover {
         color: #a32222; }
 

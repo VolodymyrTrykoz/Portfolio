@@ -20,7 +20,7 @@
 
 
 
-$content-color: #1B4367;
+$link-color: #2309f1;
 $link-hover: #a32222;
 
 html {
@@ -62,7 +62,8 @@ ul, li {
       &__description {
       font-size: 3rem; 
       padding-top: 1em; 
-      color:  #1B4367;
+      padding-bottom: 1em;
+      color: $link-color; 
       transition: 3s all; 
       
           &--shift {
@@ -71,10 +72,7 @@ ul, li {
           }
       }
 
-      &__name {
-        padding-top: 2em;
-      }
-
+    
       &__img {
       
           & .img-my-photo {
@@ -89,7 +87,8 @@ ul, li {
 .running-string {
   font-family: 'Source Serif Pro', serif;
   font-size: 6rem;
-  color: $content-color;
+  color: $link-color; 
+  
 }
 
 
@@ -103,13 +102,13 @@ ul, li {
 }
 
 .item-link {
-  color:$content-color;
+  color:$link-color;
 }
 
 
 
 hr {
- background: $content-color;
+ background: $link-color;
 }
 
 
@@ -132,7 +131,7 @@ hr {
   &:before, &:after {
     right: 0;
     bottom: 0;
-    background: #0BAAD4;
+    background: #fff;
   }
   &:before {
     width: 100%;
@@ -140,12 +139,13 @@ hr {
     transform:  translateX(-100%);
   }
   &:after {
-    width: 2px;
+    width: 3px;
     height: 100%;
     transform:  translateY(100%);
   }
   &:hover {
-    color: $link-hover;
+    color: $link-color;
+
   }
   &:active {
     color: blue;
@@ -156,7 +156,7 @@ hr {
     &:before, &:after {
       left: 0;
       top: 0;
-      background: $link-hover;
+      background: $link-color;
     }
     &:before {
       width: 100%;
@@ -164,7 +164,7 @@ hr {
       transform:  translateX(100%);
     }
     &:after {
-      width: 2px;
+      width: 3px;
       height: 100%;
       transform:  translateY(-100%);
     }
@@ -219,7 +219,7 @@ hr {
 
 .item__back {
   @extend %flex-hor-vert-center;
-  background-color: rgba(157, 115, 112, 0.6);
+  background-color: rgba(113, 110, 105, 0.6);
   transform: rotateY(180deg);
   box-shadow: 10px 10px 40px #fff;
 }
@@ -233,13 +233,16 @@ hr {
             &--link {
               @extend %transition;
               font-weight: 700;
-              color: #1B4367;
+              color: $link-color; ;
                  &:hover {
                   color: $link-hover;
                  } 
             }
       }
 } 
+
+
+
 
 
 
