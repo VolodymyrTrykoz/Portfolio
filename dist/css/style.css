@@ -731,15 +731,15 @@ hr {
   z-index: 2;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
-  -webkit-box-shadow: 5px 5px 40px #b24d4dd1;
-          box-shadow: 5px 5px 40px #b24d4dd1; }
+  -webkit-box-shadow: 5px 5px 40px #a22015;
+          box-shadow: 5px 5px 40px #a22015; }
 
 .item__back {
-  background-color: #e98784d1;
+  background-color: rgba(233, 138, 130, 0.6);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-box-shadow: 5px 5px 40px #b24d4dd1;
-          box-shadow: 5px 5px 40px #b24d4dd1; }
+  -webkit-box-shadow: 5px 5px 40px #a22015;
+          box-shadow: 5px 5px 40px #a22015; }
 
 .back__list {
   font-size: 2rem;

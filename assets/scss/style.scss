@@ -214,14 +214,14 @@ hr {
 .item__front {
   z-index: 2;
   transform: rotateY(0deg);
-  box-shadow: 5px 5px 40px #b24d4dd1;
+  box-shadow: 5px 5px 40px #a22015;
 }
 
 .item__back {
   @extend %flex-hor-vert-center;
-  background-color: #e98784d1;
+  background-color: rgba(233, 138, 130, 0.6);
   transform: rotateY(180deg);
-  box-shadow: 5px 5px 40px #b24d4dd1;
+  box-shadow: 5px 5px 40px #a22015;
 }
 
 .back__list {
