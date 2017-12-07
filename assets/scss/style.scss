@@ -20,8 +20,7 @@
 
 
 
-$link-color: #2309f1;
-$link-hover: #a32222;
+
 
 html {
   font-size: 62.5%;
@@ -34,7 +33,7 @@ html {
 }
 
 
-body {font-family: 'Barlow Semi Condensed', sans-serif;}
+body {font-family: $primary_font;}
 
 a {text-decoration: none;}
 
@@ -131,7 +130,7 @@ hr {
   &:before, &:after {
     right: 0;
     bottom: 0;
-    background: #fff;
+    background: #09f3bf;
   }
   &:before {
     width: 100%;

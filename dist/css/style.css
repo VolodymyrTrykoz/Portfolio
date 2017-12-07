@@ -573,7 +573,7 @@ html {
   background-attachment: fixed; }
 
 body {
-  font-family: 'Barlow Semi Condensed', sans-serif; }
+  font-family: "Barlow Semi Condensed", sans-serif; }
 
 a {
   text-decoration: none; }
@@ -655,7 +655,7 @@ hr {
   .item-link:before, .item-link:after {
     right: 0;
     bottom: 0;
-    background: #fff; }
+    background: #09f3bf; }
   .item-link:before {
     width: 100%;
     height: 2px;
