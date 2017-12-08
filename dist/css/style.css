@@ -472,7 +472,7 @@ ul, li {
     font-size: 3rem;
     padding-top: 1em;
     padding-bottom: 1em;
-    color: #2309f1;
+    color: #00897B;
     -webkit-transition: 3s all;
     -o-transition: 3s all;
     transition: 3s all; }
@@ -486,11 +486,8 @@ ul, li {
     border-radius: 50%;
     width: 25%; }
 
-.description-contact {
-  color: #0dfcfe; }
-
 .container__description--link a {
-  color: #0afaf1;
+  color: #283593;
   text-shadow: none;
   position: relative; }
   .container__description--link a::before {
@@ -516,7 +513,7 @@ ul, li {
 .running-string {
   font-family: 'Source Serif Pro', serif;
   font-size: 6rem;
-  color: #2309f1; }
+  color: #00897B; }
 
 .list__item {
   display: inline-block;
@@ -525,10 +522,10 @@ ul, li {
   padding: 1em; }
 
 .item-link {
-  color: #2309f1; }
+  color: #00897B; }
 
 hr {
-  background: #2309f1; }
+  background: #00897B; }
 
 .item-link, .item-link > span {
   position: relative;
@@ -566,7 +563,7 @@ hr {
         -ms-transform: translateY(100%);
             transform: translateY(100%); }
   .item-link:hover {
-    color: #2309f1; }
+    color: #00897B; }
   .item-link:active {
     color: blue; }
   .item-link > span {
@@ -575,7 +572,7 @@ hr {
     .item-link > span:before, .item-link > span:after {
       left: 0;
       top: 0;
-      background: #2309f1; }
+      background: #00897B; }
     .item-link > span:before {
       width: 100%;
       height: 2px;
@@ -654,12 +651,12 @@ hr {
 .list__github,
 .list__gmail {
   position: relative;
-  color: #2309f1; }
+  color: #00897B; }
   .list__phone:hover,
   .list__linkedIn:hover,
   .list__github:hover,
   .list__gmail:hover {
-    color: #68052d; }
+    color: #283593; }
 
 .list__phone:before,
 .list__linkedIn:before,
