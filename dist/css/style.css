@@ -388,102 +388,13 @@ th {
       -ms-flex-align: center;
           align-items: center; }
 
-.back__list-item--link {
+.list__phone,
+.list__linkedIn,
+.list__github,
+.list__gmail {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear; }
-
-@-webkit-keyframes width {
-  from {
-    width: 0%; }
-  to {
-    width: 100%;
-    background-color: #e88383; } }
-
-@media only screen and (max-width: 1220px) {
-  .header {
-    max-width: 100%; } }
-
-@media only screen and (max-width: 992px) {
-  .header__items {
-    display: block; }
-  .main-title {
-    font-size: 7rem; }
-  .main-subtitle {
-    font-size: 5rem; }
-  .list__item {
-    padding: 0 0.5rem; }
-  .indicators__link {
-    font-size: 1rem; }
-  .story__item-box {
-    width: 65%;
-    margin: 15px auto; }
-  .service__item:nth-child(-n + 5):after {
-    content: '';
-    position: absolute;
-    width: 85%;
-    height: 1px;
-    background: #e5e5e5;
-    margin-bottom: 5rem; } }
-
-@media only screen and (max-width: 768px) {
-  .item-box__nav, .item-box__magnif, .item-box__shopp {
-    padding: 0; }
-  .main-subtitle {
-    margin-top: 30rem; }
-  .main-title {
-    font-size: 4rem; }
-  .header__item-box, .nav__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .carousel-indicators {
-    bottom: 8rem;
-    margin-left: 2.5rem; }
-  .indicators__link span {
-    display: block; }
-  .icon--users, .addinf__text {
-    font-size: 1rem; }
-  .duties__img .img-responsive {
-    margin: 2rem auto; }
-  .number {
-    font-size: 3rem; }
-  .picture-item {
-    width: 62%;
-    margin: 0 auto; }
-  .img-block__tablet {
-    width: 100%; }
-  .img-block__phone {
-    left: 50%;
-    width: 50%; }
-  .data-item span {
-    font-size: 1rem; }
-  .item__social-link .icon {
-    padding: 0.7rem 1.5rem; }
-  .portfolio-basis-item .icon--photo {
-    font-size: 1rem; }
-  .basis-item__descr {
-    display: none; }
-  .carousel-wrapper .icon {
-    padding-top: 25rem; }
-  .carousel-wrapper .icon--indent {
-    padding-top: 12rem; }
-  .carousel-page__img {
-    margin-right: 2.5rem; }
-  .carousel-img {
-    margin: 3rem; }
-  .client__box, .client__name, .client__job {
-    text-align: center; }
-  .blog-stat {
-    margin-bottom: 1.5rem; }
-  .carousel-page__blcquote {
-    font-size: 1rem; }
-  .social__span {
-    display: block; } }
 
 @font-face {
   font-family: "social";
@@ -496,58 +407,14 @@ th {
   font-family: "social"; }
   .icon:before {
     /* Some common icon stuff */ }
-  .icon.icon--alarm:before {
+  .icon.icon--git:before {
     content: ""; }
-  .icon.icon--arrow:before {
+  .icon.icon--gmail:before {
     content: ""; }
-  .icon.icon--comments:before {
+  .icon.icon--link:before {
     content: ""; }
-  .icon.icon--creat:before {
+  .icon.icon--phone:before {
     content: ""; }
-  .icon.icon--css:before {
-    content: ""; }
-  .icon.icon--digit:before {
-    content: ""; }
-  .icon.icon--drbbbl:before {
-    content: ""; }
-  .icon.icon--equal:before {
-    content: ""; }
-  .icon.icon--fb:before {
-    content: ""; }
-  .icon.icon--gooogle:before {
-    content: ""; }
-  .icon.icon--inst:before {
-    content: ""; }
-  .icon.icon--left-arrow:before {
-    content: ""; }
-  .icon.icon--magnif:before {
-    content: ""; }
-  .icon.icon--photo:before {
-    content: ""; }
-  .icon.icon--pint:before {
-    content: ""; }
-  .icon.icon--quote-img:before {
-    content: ""; }
-  .icon.icon--right-arrow:before {
-    content: ""; }
-  .icon.icon--seo2:before {
-    content: ""; }
-  .icon.icon--shopp:before {
-    content: ""; }
-  .icon.icon--tmblr:before {
-    content: ""; }
-  .icon.icon--twitt:before {
-    content: ""; }
-  .icon.icon--users:before {
-    content: ""; }
-  .icon.icon--visit:before {
-    content: ""; }
-  .icon.icon--web-des:before {
-    content: ""; }
-  .icon.icon--webdsgn:before {
-    content: ""; }
-  .icon.icon--youtb:before {
-    content: ""; }
 
 .item__back {
   display: -webkit-box;
@@ -560,7 +427,10 @@ th {
       -ms-flex-align: center;
           align-items: center; }
 
-.back__list-item--link {
+.list__phone,
+.list__linkedIn,
+.list__github,
+.list__gmail {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear; }
@@ -616,12 +486,39 @@ ul, li {
     border-radius: 50%;
     width: 25%; }
 
+.description-contact {
+  color: #0dfcfe; }
+
+.container__description--link a {
+  color: #0afaf1;
+  text-shadow: none;
+  position: relative; }
+  .container__description--link a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #fff;
+    content: attr(data-hover);
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out;
+    -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 0; }
+  .container__description--link a:hover::before {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
 .running-string {
   font-family: 'Source Serif Pro', serif;
   font-size: 6rem;
   color: #2309f1; }
 
-.list-item {
+.list__item {
   display: inline-block;
   text-transform: uppercase;
   font-size: 2rem;
@@ -745,11 +642,44 @@ hr {
   color: #fff; }
   .back__list-item {
     padding: 0.1em; }
-    .back__list-item--link {
-      font-weight: 700;
-      color: #2309f1; }
-      .back__list-item--link:hover {
-        color: #a32222; }
+
+.contacts {
+  font-size: 2rem;
+  font-family: "social"; }
+  .contacts__list {
+    padding: 0.8em; }
+
+.list__phone,
+.list__linkedIn,
+.list__github,
+.list__gmail {
+  position: relative;
+  color: #2309f1; }
+  .list__phone:hover,
+  .list__linkedIn:hover,
+  .list__github:hover,
+  .list__gmail:hover {
+    color: #68052d; }
+
+.list__phone:before,
+.list__linkedIn:before,
+.list__github:before,
+.list__gmail:before {
+  position: absolute;
+  left: -3rem;
+  top: 0.2rem; }
+
+.list__phone:before {
+  content: '\EA04'; }
+
+.list__linkedIn:before {
+  content: '\EA03'; }
+
+.list__github:before {
+  content: '\EA01'; }
+
+.list__gmail:before {
+  content: '\EA02'; }
 
 @media only screen and (max-width: 768px) {
   .container__description {
@@ -758,7 +688,7 @@ hr {
     text-align: justify; }
   .running-string {
     font-size: 4rem; }
-  .list-item {
+  .list__item {
     display: block; }
   .flip-box {
     margin: 2rem 0; } }

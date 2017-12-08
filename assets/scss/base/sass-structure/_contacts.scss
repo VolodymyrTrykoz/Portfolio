@@ -1,0 +1,48 @@
+//-------------contacts-------------//
+
+.contacts {
+  font-size: 2rem;
+  font-family: "social";
+        &__list {
+          padding: 0.8em;
+        }
+}
+.list__phone,
+.list__linkedIn,
+.list__github,
+.list__gmail {
+  @extend %transition;
+  position: relative;
+  color: #2309f1;
+      &:hover {
+        color: #68052d;
+      } 
+
+}
+.list__phone:before,
+.list__linkedIn:before,
+.list__github:before,
+.list__gmail:before {
+  position: absolute;
+  left: -3rem;
+  top: 0.2rem;
+}
+
+
+.list__phone:before {
+  content: '\EA04';
+}
+.list__linkedIn:before {
+   content: '\EA03';
+}
+.list__github:before {
+   content: '\EA01';
+}
+.list__gmail:before {
+  content: '\EA02';
+  
+}
+
+
+
+//-------------end contacts-------------//
