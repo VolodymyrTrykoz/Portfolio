@@ -1,8 +1,7 @@
 
-function none(){
-    var x = document.querySelector('.container__description--shift');
-    x.style.transform = 'translateY(0)';
-    x.style.opacity = '1';
-}
 
-
+document.addEventListener('DOMContentLoaded', function(){
+	var slidingDiv = document.querySelector('.container__description--shift');
+    slidingDiv.classList.add('container__description--stat');
+    
+});

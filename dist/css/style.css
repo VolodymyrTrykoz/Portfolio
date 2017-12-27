@@ -481,6 +481,11 @@ ul, li {
           -ms-transform: translateY(100px);
               transform: translateY(100px);
       opacity: 0; }
+    .container__description--stat {
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1; }
   .container__img .img-my-photo {
     padding: 5rem;
     border-radius: 50%;

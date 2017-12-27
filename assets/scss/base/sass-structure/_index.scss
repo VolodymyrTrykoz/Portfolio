@@ -39,9 +39,15 @@ ul, li {
       color: $link-color; 
       transition: 3s all; 
       
+      
           &--shift {
             transform: translateY(100px);
             opacity: 0;
+          }
+
+          &--stat {
+            transform: translateY(0);
+            opacity: 1;
           }
       }
 
@@ -174,3 +180,9 @@ hr {
 
   }
 }
+
+
+
+
+
+
