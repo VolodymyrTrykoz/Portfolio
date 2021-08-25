@@ -595,7 +595,7 @@ hr {
         -ms-transform: translate(0, 0);
             transform: translate(0, 0); }
 
-.flip-box, .item__front, .item__back {
+.flip-box, .item__front, .item__front img, .item__back {
   width: 34rem;
   height: 29rem;
   border-radius: 1rem; }
