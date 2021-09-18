@@ -492,7 +492,7 @@ ul, li {
     width: 25%; }
 
 .container__description--link a {
-  color: #283593;
+  color: #1b00fb;
   text-shadow: none;
   position: relative; }
   .container__description--link a::before {
@@ -500,7 +500,7 @@ ul, li {
     top: 0;
     left: 0;
     overflow: hidden;
-    color: #0093fba6;
+    color: #000000;
     content: attr(data-hover);
     -webkit-transition: .3s ease-out;
     -o-transition: .3s ease-out;
